@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1MRQUoYKlCI=",
+  "dgSpecHash": "lr8rKbYqkpI=",
   "success": true,
   "projectFilePath": "C:\\Users\\jesus\\OneDrive\\Documents\\OmniReserve\\OmniReserve.Application\\OmniReserve.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jesus\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.11\\microsoft.extensions.dependencyinjection.abstractions.10.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

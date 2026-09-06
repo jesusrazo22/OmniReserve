@@ -8,6 +8,9 @@ C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\bin\Debug\net10.0\
 C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\bin\Debug\net10.0\OmniReserve.Api.pdb
 C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\bin\Debug\net10.0\Microsoft.OpenApi.dll
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\bin\Debug\net10.0\OmniReserve.Application.dll
 C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\bin\Debug\net10.0\OmniReserve.Domain.dll
 C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\bin\Debug\net10.0\OmniReserve.Infrastructure.dll
@@ -38,6 +41,3 @@ C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\obj\Debug\net10.0\
 C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\obj\Debug\net10.0\OmniReserve.Api.pdb
 C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\obj\Debug\net10.0\OmniReserve.Api.genruntimeconfig.cache
 C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\obj\Debug\net10.0\ref\OmniReserve.Api.dll
-C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
