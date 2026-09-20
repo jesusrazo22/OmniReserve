@@ -1,0 +1,12 @@
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Domain\bin\Debug\net10.0\OmniReserve.Domain.deps.json
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Domain\bin\Debug\net10.0\OmniReserve.Domain.dll
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Domain\bin\Debug\net10.0\OmniReserve.Domain.pdb
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Domain\obj\Debug\net10.0\OmniReserve.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Domain\obj\Debug\net10.0\OmniReserve.Domain.AssemblyInfoInputs.cache
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Domain\obj\Debug\net10.0\OmniReserve.Domain.AssemblyInfo.cs
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Domain\obj\Debug\net10.0\OmniReserve.Domain.csproj.CoreCompileInputs.cache
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Domain\obj\Debug\net10.0\OmniReserve.Domain.sourcelink.json
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Domain\obj\Debug\net10.0\OmniReserve.Domain.dll
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Domain\obj\Debug\net10.0\refint\OmniReserve.Domain.dll
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Domain\obj\Debug\net10.0\OmniReserve.Domain.pdb
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Domain\obj\Debug\net10.0\ref\OmniReserve.Domain.dll
