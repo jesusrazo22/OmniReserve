@@ -27,7 +27,7 @@ public class RoomsController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetRoom(Guid id)
     {
-
+        // Se debe instanciar explícitamente el Query llenando sus propiedades
         var query = new GetRoomByIdQuery { RoomId = id };
         
         var result = await _sender.Send(query);
