@@ -14,6 +14,8 @@ public static class DependencyInjection
         services.AddDbContext<ApplicationDbContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString("OmniReserveDb")));
 
+        services.AddScoped<IReservationRepository, ReservationRepository>();
+
         services.AddScoped<IRoomRepository, RoomRepository>();
 
         return services;
