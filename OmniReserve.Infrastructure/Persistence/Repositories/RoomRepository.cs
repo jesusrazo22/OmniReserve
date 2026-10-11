@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using OmniReserve.Application.Common.Interfaces;
 using OmniReserve.Domain.Entities;
 
@@ -5,20 +6,25 @@ namespace OmniReserve.Infrastructure.Persistence.Repositories;
 
 public class RoomRepository : IRoomRepository
 {
-    // Diccionario para mantener las habitaciones en memoria viva
-    private static readonly Dictionary<Guid, Room> _rooms = new();
+    private readonly ApplicationDbContext _context;
 
-    public Task AddAsync(Room room)
+    public RoomRepository(ApplicationDbContext context)
     {
-        _rooms[room.Id] = room;
-        return Task.CompletedTask;
+        _context = context;
     }
 
-    public Task<Room?> GetByIdAsync(Guid id)
+    public async Task AddAsync(Room room)
     {
-        _rooms.TryGetValue(id, out var room);
+        // EF Core trackea la Entidad
+        await _context.Rooms.AddAsync(room);
         
-        // Retorna null si no lo encuentra, como dicta la firma Task<Room?>
-        return Task.FromResult(room);
+        // ¡Crucial! Confirma (Commit) a la base de datos real
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task<Room?> GetByIdAsync(Guid id)
+    {
+        // Se conecta a PostgreSQL para obtener o retornar nulo
+        return await _context.Rooms.FirstOrDefaultAsync(r => r.Id == id);
     }
 }
