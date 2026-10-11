@@ -15,7 +15,7 @@ public class RoomRepository : IRoomRepository
 
     public async Task AddAsync(Room room)
     {
-        // EF Core trackea la Entidad
+       
         await _context.Rooms.AddAsync(room);
         
         // ¡Crucial! Confirma (Commit) a la base de datos real
