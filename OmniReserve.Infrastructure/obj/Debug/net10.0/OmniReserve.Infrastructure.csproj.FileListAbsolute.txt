@@ -14,3 +14,5 @@ C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Infrastructure\obj\Deb
 C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Infrastructure\obj\Debug\net10.0\refint\OmniReserve.Infrastructure.dll
 C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Infrastructure\obj\Debug\net10.0\OmniReserve.Infrastructure.pdb
 C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Infrastructure\obj\Debug\net10.0\ref\OmniReserve.Infrastructure.dll
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Infrastructure\bin\Debug\net10.0\OmniReserve.Application.dll
+C:\Users\jesus\OneDrive\Documents\OmniReserve\OmniReserve.Infrastructure\bin\Debug\net10.0\OmniReserve.Application.pdb
