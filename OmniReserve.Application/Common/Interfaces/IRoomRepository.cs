@@ -6,4 +6,9 @@ public interface IRoomRepository
 {
     Task AddAsync(Room room);
     Task<Room?> GetByIdAsync(Guid id);
+    
+    // Nueva firma
+    Task<Room?> SearchByNumberAsync(string roomNumber);
+
+    Task<List<Room>> GetRoomsByTypeRawAsync(string roomType);
 }

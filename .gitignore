@@ -1,0 +1,3 @@
+# Ignorar archivos appsettings locales o de desarrollo
+**/appsettings.Development.json
+OmniReserve.Api/appsettings.Development.json
