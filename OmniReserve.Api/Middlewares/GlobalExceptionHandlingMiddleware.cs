@@ -1,6 +1,7 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using OmniReserve.Application.Common.Exceptions;
+using OmniReserve.Domain.Exceptions; 
 
 namespace OmniReserve.Api.Middlewares;
 
@@ -30,6 +31,7 @@ public class GlobalExceptionHandlingMiddleware
 
     private static async Task HandleExceptionAsync(HttpContext context, Exception exception)
     {
+        // 1. Manejo de Errores de Validación (FluentValidation)
         if (exception is ValidationException validationException)
         {
             var validationProblem = new ProblemDetails
@@ -49,6 +51,25 @@ public class GlobalExceptionHandlingMiddleware
             return;
         }
 
+        // 2. Interceptando Errores Puros del Negocio (DomainException)
+        else if (exception is DomainException domainException)
+        {
+            var domainProblem = new ProblemDetails
+            {
+                Status = StatusCodes.Status400BadRequest,
+                Title = "Error de Dominio",
+                Type = "https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1",
+                Detail = domainException.Message // Expone el mensaje específico de la regla de negocio
+            };
+
+            context.Response.ContentType = "application/problem+json";
+            context.Response.StatusCode = StatusCodes.Status400BadRequest;
+            
+            await context.Response.WriteAsync(JsonSerializer.Serialize(domainProblem));
+            return;
+        }
+
+        // 3. Manejo Genérico: Errores Graves / No controlados (500)
         var genericProblem = new ProblemDetails
         {
             Status = StatusCodes.Status500InternalServerError,
