@@ -3,7 +3,6 @@ using OmniReserve.Application.Common.Interfaces;
 using OmniReserve.Domain.Entities;
 
 namespace OmniReserve.Application.Rooms.Commands.CreateRoom;
-
 public class CreateRoomCommandHandler : IRequestHandler<CreateRoomCommand, Guid>
 {
     private readonly IRoomRepository _roomRepository;
