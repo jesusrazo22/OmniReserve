@@ -12,7 +12,6 @@ public class RoomRepository : IRoomRepository
     {
         _context = context;
     }
-
     public async Task AddAsync(Room room)
     {
        
@@ -31,5 +30,11 @@ public class RoomRepository : IRoomRepository
     {
         
         return await _context.Rooms.FirstOrDefaultAsync(r => r.RoomNumber == roomNumber);
+    }
+      public async Task<List<Room>> GetRoomsByTypeRawAsync(string roomType)
+    {
+         return await _context.Rooms
+            .FromSql($"SELECT * FROM \"Rooms\" WHERE \"Type\" = {roomType}")
+            .ToListAsync();
     }
 }
