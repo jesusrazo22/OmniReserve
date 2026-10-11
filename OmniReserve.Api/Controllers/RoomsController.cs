@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using OmniReserve.Application.Rooms.Commands.CreateRoom;
+using OmniReserve.Application.Rooms.Queries.GetRoomById;
 
 namespace OmniReserve.Api.Controllers;
 
@@ -19,7 +20,18 @@ public class RoomsController : ControllerBase
     public async Task<IActionResult> CreateRoom([FromBody] CreateRoomCommand command)
     {
         var roomId = await _sender.Send(command);
-        
+
         return Ok(roomId);
+    }
+    
+     [HttpGet("{id}")]
+    public async Task<IActionResult> GetRoom(Guid id)
+    {
+        // Se debe instanciar explícitamente el Query llenando sus propiedades
+        var query = new GetRoomByIdQuery { RoomId = id };
+        
+        var result = await _sender.Send(query);
+        
+        return Ok(result);
     }
 }
