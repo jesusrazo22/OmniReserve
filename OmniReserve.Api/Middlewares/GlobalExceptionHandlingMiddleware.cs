@@ -70,6 +70,7 @@ public class GlobalExceptionHandlingMiddleware
         }
 
         // 3. Manejo Genérico: Errores Graves / No controlados (500)
+        
         var genericProblem = new ProblemDetails
         {
             Status = StatusCodes.Status500InternalServerError,
