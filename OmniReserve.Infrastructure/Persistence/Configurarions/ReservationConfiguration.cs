@@ -40,5 +40,6 @@ public class ReservationConfiguration : IEntityTypeConfiguration<Reservation>
                .WithMany(user => user.Reservations)
                .HasForeignKey(reservation => reservation.UserId)
                .OnDelete(DeleteBehavior.Restrict);
+               
     }
 }
