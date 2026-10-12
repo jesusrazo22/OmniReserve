@@ -14,16 +14,14 @@ public class GetReservationDetailsQueryHandler : IRequestHandler<GetReservationD
 
     public async Task<ReservationDetailsDto> Handle(GetReservationDetailsQuery request, CancellationToken cancellationToken)
     {
-        // Como este repositorio usa Eager Loading interno, el objeto 'reservation' 
-        // tendrá todas las ramificaciones pre-cargadas.
+
         var reservation = await _reservationRepository.GetReservationWithDetailsAsync(request.ReservationId);
 
         if (reservation is null)
         {
-            throw new Exception("Reservación no encontrada."); // Excepción base, luego veremos Middleware
+            throw new Exception("Reservación no encontrada."); 
         }
 
-        // Mapeo. Acceder a .User y .Room es seguro y no produce Problema N+1
         return new ReservationDetailsDto
         {
             Id = reservation.Id,
