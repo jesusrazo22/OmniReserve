@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using OmniReserve.Domain.Entities;
+using OmniReserve.Domain.ValueObjects;
 
 namespace OmniReserve.Infrastructure.Persistence.Configurations;
 
@@ -12,9 +13,19 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.HasKey(u => u.Id);
 
+        // Value Conversion: El puente entre el Dominio complejo y la BD simple
         builder.Property(u => u.Email)
-            .IsRequired()
-            .HasMaxLength(100);
+            .HasConversion(
+                emailObj => emailObj.Value,              
+                emailStr => new EmailAddress(emailStr)   
+            )
+            .HasColumnName("Email")
+            .HasMaxLength(255)
+            .IsRequired();
+
+        // Opcional recomendado: El email debe ser único en la BD
+        builder.HasIndex(u => u.Email)
+            .IsUnique();
 
         builder.Property(u => u.FirstName)
             .IsRequired()
