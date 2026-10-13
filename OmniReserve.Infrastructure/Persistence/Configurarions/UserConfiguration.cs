@@ -23,7 +23,6 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .HasMaxLength(255)
             .IsRequired();
 
-        // Opcional recomendado: El email debe ser único en la BD
         builder.HasIndex(u => u.Email)
             .IsUnique();
 
